@@ -1,0 +1,459 @@
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ========== Base ========== */
+/* HTML 元素通用樣式 */
+a {
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+/* ========== Layout ========== */
+/* flex, position, display 等排版用法 */
+.d-flex {
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.jcct {
+    justify-content: center;
+}
+
+.aict {
+    align-items: center;
+}
+
+.fdcol {
+    flex-direction: column;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+/* =====Utilities===== */
+/* 小工具 */
+.bg-black {
+    background-color: #000000;
+}
+
+/* ========== Typography ========== */
+/* 字體、大小、對齊、粗細、顏色等文字樣式 */
+.text-white {
+    color: #ffffff;
+}
+
+.fz-64 {
+    font-size: 64px;
+}
+.fz-24{
+    font-size: 24px;
+}
+
+/* ========== Spacing ========== */
+/* margin / padding 相關 */
+.mb-36{
+    margin-bottom: 36px;
+}
+
+.mb-32{
+    margin-bottom: 32px;
+}
+
+.mr-16{
+    margin-right: 16px;
+}
+
+/* ========== Components ========== */
+/* .profile、.card、.menu、.footer 等你命名的區塊 */
+.container {
+    max-width: 100%;
+    width: 1320px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+header {
+    height: 128px;
+}
+
+.nav-list {
+    width: 100%;
+    gap: 40px;
+}
+
+.nav-list li {
+    max-width: 278.5px;
+}
+
+.nav-list a {
+    color: #ffffff;
+}
+
+.hero .container {
+    gap: 24px
+}
+
+.hero .my-picture,
+.hero .text-section {
+    width: calc(50% - 12px);
+}
+
+.hero .my-picture {
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.hero .my-name {
+    font-size: 128px;
+    color: #00FFA3;
+    text-align: end;
+}
+
+.hero .btn-contact{
+    background-color: #fff;
+    width: 185px;
+    padding:12px 24px;
+    border-radius: 32px;
+    color:#000000;
+    font-size: 16px;
+    transition: all 0.5s;
+    gap:4px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.hero .btn-contact:hover{
+   transform:scale(1.2);
+}
+
+
+.hero .btn-contact .arrow-out{
+    width: 24px;
+    display: block;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.introduction{
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/background-img.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding:160px 0;
+}
+
+.introduction .container{
+    gap: 24px;
+}
+
+.introduction-text{
+    flex: 0 0 40.6%; /* 526 ÷ 1296 */
+}
+
+.intro-pictures{
+    flex: 0 0 57%; /* 746 ÷ 1296 ≈  */
+    gap:24px;
+}
+
+.intro-pictures img:nth-child(1),
+.intro-pictures img:nth-child(2) {
+  flex: 0 0 196px;
+  max-width: 196px;
+  object-fit: cover;
+}
+
+.intro-pictures img:nth-child(3) {
+  flex: 0 0 306px;
+  max-width: 306px;
+  object-fit: cover;
+}
+
+.sparkle-group{
+    gap:16px;
+}
+
+.about{
+    padding:160px 0;
+
+}
+
+.about .about-cards{
+    width: calc(636 / 1296 * 100%);
+    gap:24px;
+}
+
+.about .about-cards .card{
+    width: calc(50% - 12px);
+    border: 1px solid #E3E3E3;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.about-cards .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+}
+
+.about-cards .card .num-flag,.about-cards .card .num-flag+h3{
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.about .about-me-right{
+    width: calc(526 / 1296 * 100%);
+}
+
+.contact{
+    padding: 96px 0;
+}
+
+.contact .call-to-action{
+    width: calc( 657/1296 * 100%);
+}
+
+.contact .contact-links{
+    width: calc( 526/1296 *100%);
+}
+
+.contact .contact-links .social-link a{
+    display: block;
+    transition: all 0.3s;
+}
+.contact .contact-links .social-link a>img{
+    max-width: 162px;
+    height: auto;
+}
+
+.contact .contact-links .social-link a:hover{
+    transform: scale(1.12);
+}
+
+.projects{
+    padding: 160px 0;
+}
+
+.projects .projects-title{
+    width: calc( 746/1296 *100%);
+    margin-left:auto;
+    margin-bottom: 16px;
+}
+
+.show-projects{
+    gap: 24px;
+}
+
+.show-projects .left{
+    width:calc( 416/1296 *100%) ;
+}
+
+.show-projects .left>img{
+    max-width: 100%;
+    height: auto;
+}
+
+.show-projects .right{
+    width:calc( 856/1296 *100%) ;
+}
+
+.show-projects .right .projects-card{
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.show-projects .right .projects-card>img{
+    width:calc( 196/856 *100%) ;
+    height: auto;
+}
+.show-projects .right .projects-card .card-text{
+    width:calc( 636/856 *100%) ;
+}
+
+.show-projects .right .projects-card .see-more-btn{
+    /* display: inline-flex; */
+    width:calc( 185/636 *100%) ;
+    border-radius: 32px;
+    padding: 12px 24px;
+    transition: all 0.3s;
+}
+
+.show-projects .right .projects-card .see-more-btn:hover{
+    transform: translateX(6px); /* 整個往右移動 */;
+}
+
+.show-projects .right .right-down{
+    gap:24px;
+}
+
+.show-projects .right .right-down img:nth-child(1){
+    width:calc( 306/856 *100%) ;
+    height: auto;
+}
+
+.show-projects .right .right-down img:nth-child(2){
+    width:calc( 526/856 *100%) ;
+    height: auto;
+}
+
+footer{
+    padding: 40px 0;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+/* ========== Effects ========== */
+/* :hover、transition、動畫等特效 */
